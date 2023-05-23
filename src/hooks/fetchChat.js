@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import axios from "axios";
+
 
 function useFetchData(pageNumber){
 
@@ -75,7 +75,7 @@ function useFetchData(pageNumber){
                         
             // console.log(res.data);
             setLoading(false);
-            
+
         }).catch(e=>{
             setError(true);
             console.error(e);
