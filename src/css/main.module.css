@@ -1,0 +1,88 @@
+img{
+    width: 100%;
+    height: auto;
+}
+.container{
+    height: 100vh;
+    overflow: hidden;
+    padding: 20px 0;
+}
+.scrollContent{
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10px;
+}
+
+.formStyle{
+    display: flex;
+    background-color: white;
+    width: calc(100% - 20px);
+    margin: auto;
+    
+    border-radius: 100vh;
+    /* border: 1px solid #FAF9F4; */
+}
+
+.formStyle>textarea{
+    outline: none;
+    border: none;
+    padding: 12px 11px;
+    font-size: 14px;
+    border-radius: 100vh;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex-grow: 1;
+    resize: none;
+    height: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    
+}
+.formStyle>textarea::-webkit-scrollbar{
+    display: none;
+}
+.formStyle>textarea::placeholder{
+    color: #B7B7B7;
+}
+
+.formStyle>div{
+    padding: 5px 0;
+    background-color: transparent;
+    font-size: 18px;
+    padding: 12px 11px;
+}
+.fileInputs{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.attachments{
+    background-color: #008000;
+    position: absolute;
+    display: flex;
+    top: -50px;
+    padding: 10px 5px;
+    border-radius: 100vh;
+    
+}
+
+.attachments::before{
+    content: '';
+    background-color: #008000;
+    clip-path: path("M1.20711 0.5H14.7929L8 7.29289L1.20711 0.5Z");
+    position: absolute;
+    bottom: -19px;
+    right: 55px;
+    width: 20px;
+    height: 20px;
+}
+
+.customIcon{
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+
+}
