@@ -19,7 +19,7 @@ function useFetchData(pageNumber){
         setError(false);
         axios({
             method: 'GET',
-            url: 'http://3.111.128.67/assignment/chat',
+            url: `${process.env.REACT_APP_API_URL}`,
             params: {page: 0}
         }).then(res=>{
             setSender(res.data.from);
@@ -62,7 +62,7 @@ function useFetchData(pageNumber){
         setError(false);
         axios({
             method: 'GET',
-            url: 'http://3.111.128.67/assignment/chat',
+            url: `${process.env.REACT_APP_API_URL}`,
             params: {page: pageNumber}
         }).then(res=>{
 
@@ -76,7 +76,6 @@ function useFetchData(pageNumber){
                 return [...prev, ...newChats];
             });
                         
-            console.log(res.data);
             setLoading(false);
             
         }).catch(e=>{
