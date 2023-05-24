@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const axios = require('axios')
 
 
 
@@ -11,7 +12,7 @@ app.use(cors());
 app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.resolve(__dirname, "./build")));
 app.use(express.json());
-const axios = require('axios')
+
 
 
 app.get('/api/chat', (req, res)=>{
